@@ -15,7 +15,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Texto aleatório por pessoa</title>
+  <title>Mensagem para todos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -33,34 +33,13 @@
   </style>
 </head>
 <body>
-  <div id="mensagem">Clique no botão para ver sua mensagem única!</div>
-  <button onclick="mostrarMensagem()">Mostrar minha mensagem</button>
+  <div id="mensagem">Clique no botão para ver a mensagem!</div>
+  <button onclick="mostrarMensagem()">Mostrar mensagem</button>
 
   <script>
-    const mensagens = [
-      "Você é o escolhido!",
-      "Você será um mestre dos códigos.",
-      "Hoje é seu dia de sorte!",
-      "Você encontrou o easter egg!",
-      "Mensagem secreta revelada.",
-      "Olá, visitante misterioso!",
-      "Saudações, viajante da web.",
-      "Cada clique é único, assim como você."
-    ];
-
     function mostrarMensagem() {
-      // Verifica se já há uma mensagem salva para esta pessoa
-      let mensagemSalva = localStorage.getItem("mensagemUnica");
-
-      // Se não tiver, sorteia uma aleatória e salva
-      if (!mensagemSalva) {
-        const indiceAleatorio = Math.floor(Math.random() * mensagens.length);
-        mensagemSalva = mensagens[indiceAleatorio];
-        localStorage.setItem("mensagemUnica", mensagemSalva);
-      }
-
-      // Mostra a mensagem
-      document.getElementById("mensagem").textContent = mensagemSalva;
+      const mensagem = "Essa é a mensagem oficial para todos!";
+      document.getElementById("mensagem").textContent = mensagem;
     }
   </script>
 </body>
