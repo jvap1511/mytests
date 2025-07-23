@@ -37,6 +37,7 @@
   <button onclick="mostrarMensagem()">Mostrar a verdade</button>
 
   <script>
+    localStorage.removeItem("mensagemUnica");
     const mensagens = [
       "Você é gay",
       "Gordin quer irma de amigo",
@@ -47,7 +48,7 @@
       "Willian nunca trabalhou, era tudo IA",
       "Almeida o melhor."
     ];
-
+    
     function mostrarMensagem() {
       // Verifica se já há uma mensagem salva para esta pessoa
       let mensagemSalva = localStorage.getItem("mensagemUnica");
